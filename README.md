@@ -30,4 +30,4 @@ Lo ideal es que tu API contenga estas cosas:
 
 ## ¿Soporte? ⚙
 
-Póngase en contacto con nosotros en https://discord.pandacommunity.org/development para cualquier pregunta adicional.
+Póngase en contacto con nosotros en https://discord.pandacommunity.org/ para cualquier pregunta adicional.
