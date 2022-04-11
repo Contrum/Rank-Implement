@@ -47,7 +47,15 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Vault -->
+		<!-- LuckPerms API -->
+		<dependency>
+			<groupId>net.luckperms</groupId>
+			<artifactId>api</artifactId>
+			<version>5.4</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Vault API -->
 		<dependency>
 			<groupId>com.github.MilkBowl</groupId>
 			<artifactId>VaultAPI</artifactId>
@@ -59,7 +67,7 @@
 		<dependency>
 			<groupId>me.activated.core</groupId>
 			<artifactId>AquaCoreAPI</artifactId>
-			<version>API</version>
+			<version>api</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/ranks/AquaCoreAPI.jar</systemPath>
 		</dependency>
@@ -68,7 +76,7 @@
 		<dependency>
 			<groupId>me.quartz.hestia</groupId>
 			<artifactId>HestiaAPI</artifactId>
-			<version>1.0</version>
+			<version>api</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/ranks/HestiaAPI.jar</systemPath>
 		</dependency>
@@ -77,7 +85,7 @@
 		<dependency>
 			<groupId>mCore</groupId>
 			<artifactId>mCore</artifactId>
-			<version>1.0</version>
+			<version>api</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/ranks/mCoreAPI.jar</systemPath>
 		</dependency>
@@ -86,7 +94,7 @@
 		<dependency>
 			<groupId>Zoom</groupId>
 			<artifactId>Zoom-API</artifactId>
-			<version>1.0</version>
+			<version>api</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/ranks/Zoom-API-1.4.jar</systemPath>
 		</dependency>
@@ -95,7 +103,7 @@
 		<dependency>
 			<groupId>Mizu</groupId>
 			<artifactId>MizuAPI</artifactId>
-			<version>1.0</version>
+			<version>api</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/ranks/MizuAPI.jar</systemPath>
 		</dependency>
@@ -104,17 +112,18 @@
 		<dependency>
 			<groupId>Hydra</groupId>
 			<artifactId>HydraAPI</artifactId>
-			<version>1.0</version>
+			<version>api</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/ranks/HydraAPI.jar</systemPath>
 		</dependency>
 
-		<!-- LuckPerms API -->
+		<!-- Venom API -->
 		<dependency>
-			<groupId>net.luckperms</groupId>
-			<artifactId>api</artifactId>
-			<version>5.4</version>
-			<scope>provided</scope>
+			<groupId>Venom</groupId>
+			<artifactId>VenomAPI</artifactId>
+			<version>api</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/ranks/venom-api.jar</systemPath>
 		</dependency>
 	</dependencies>
 
