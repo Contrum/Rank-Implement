@@ -125,6 +125,15 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/ranks/venom-api.jar</systemPath>
 		</dependency>
+
+		<!-- Phoenix API -->
+		<dependency>
+			<groupId>Phoenix</groupId>
+			<artifactId>PhoenixAPI</artifactId>
+			<version>api</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/ranks/Phoenix-API.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<build>
