@@ -3,6 +3,7 @@ package dev.panda.rank.impl;
 import dev.panda.rank.IRank;
 import me.activated.core.api.player.GlobalPlayer;
 import me.activated.core.api.player.PlayerData;
+import me.activated.core.api.rank.grant.Grant;
 import me.activated.core.plugin.AquaCoreAPI;
 import org.bukkit.entity.Player;
 
@@ -43,6 +44,21 @@ public class AquaCore implements IRank {
     public int getRankWeight(UUID uuid) {
         GlobalPlayer data = AquaCoreAPI.INSTANCE.getGlobalPlayer(uuid);
         return data == null ? 0 : data.getRankWeight();
+    }
+
+    @Override
+    public boolean hasRankTemporary(UUID uuid) {
+        PlayerData data = AquaCoreAPI.INSTANCE.getPlayerData(uuid);
+
+        if (data == null) return false;
+
+        for (Grant grant : data.getActiveGrants()) {
+            if (data.getHighestRank().equals(grant.getRank())) {
+                return !grant.isPermanent();
+            }
+        }
+
+        return false;
     }
 
     @Override

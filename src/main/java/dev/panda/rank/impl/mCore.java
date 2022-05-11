@@ -2,6 +2,7 @@ package dev.panda.rank.impl;
 
 import dev.panda.rank.IRank;
 import me.abhi.core.CorePlugin;
+import me.abhi.core.grant.Grant;
 import me.abhi.core.profile.CoreProfile;
 import me.abhi.core.rank.Rank;
 import org.bukkit.entity.Player;
@@ -41,18 +42,26 @@ public class mCore implements IRank{
     }
 
     @Override
+    public boolean hasRankTemporary(UUID uuid) {
+        CoreProfile coreProfile = CorePlugin.getInstance().getProfileHandler().getCoreProfile(uuid);
+
+        if (coreProfile == null) return false;
+
+        for (Grant grant : coreProfile.getGrants()) {
+            if (coreProfile.getRank().equals(grant.getRank())) {
+                return grant.getDuration() > 0;
+            }
+        }
+        return false;
+    }
+
+    @Override
     public String getRealName(Player player) {
         return null;
     }
 
     public Rank getRank(UUID uuid) {
         CoreProfile coreProfile = CorePlugin.getInstance().getProfileHandler().getCoreProfile(uuid);
-
-        try {
-            return coreProfile.getRank();
-        }
-        catch (Exception ex) {
-            return null;
-        }
+        return coreProfile == null ? null : coreProfile.getRank();
     }
 }

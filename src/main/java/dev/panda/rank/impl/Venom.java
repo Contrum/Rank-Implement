@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 
 import java.util.UUID;
 
-public class Venom implements IRank{
+public class Venom implements IRank {
 
     @Override
     public String getRankSystem() {
@@ -37,6 +37,11 @@ public class Venom implements IRank{
     @Override
     public int getRankWeight(UUID uuid) {
         return getRank(uuid).getPriority();
+    }
+
+    @Override
+    public boolean hasRankTemporary(UUID uuid) {
+        return false;
     }
 
     @Override

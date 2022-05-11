@@ -48,6 +48,11 @@ public class PermissionsEx implements IRank {
     }
 
     @Override
+    public boolean hasRankTemporary(UUID uuid) {
+        return false;
+    }
+
+    @Override
     public String getRealName(Player player) {
         return null;
     }
