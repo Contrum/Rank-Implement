@@ -22,12 +22,18 @@ public class ClassUtil {
         URL resource = codeSource.getLocation();
 
         String relPath = packageName.replace('.', '/');
-        String resPath = resource.getPath().replace("%20", " ");
+        String resPath = resource.getPath()
+                .replace("%20", " ")
+                .replace("%5B", "[")
+                .replace("%5D", "]")
+                .replace("%7B", "{")
+                .replace("%7D", "}");
         String jarPath = resPath.replaceFirst("[.]jar[!].*", ".jar").replaceFirst("file:", "");
 
         try {
             jarFile = new JarFile(jarPath);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             throw new IllegalStateException("Unexpected IOException reading JAR File '" + jarPath + "'", e);
         }
 
