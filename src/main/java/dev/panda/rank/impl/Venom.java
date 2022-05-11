@@ -2,13 +2,12 @@ package dev.panda.rank.impl;
 
 import cc.fyre.venom.VenomAPI;
 import dev.panda.rank.IRank;
-import dev.panda.rank.RankObject;
 import cc.fyre.venom.rank.data.Rank;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
 
-public class Venom implements IRank, RankObject<Rank> {
+public class Venom implements IRank{
 
     @Override
     public String getRankSystem() {
@@ -17,12 +16,12 @@ public class Venom implements IRank, RankObject<Rank> {
 
     @Override
     public String getRankName(UUID uuid) {
-        return this.getRank(uuid).getId();
+        return getRank(uuid).getId();
     }
 
     @Override
     public String getRankPrefix(UUID uuid) {
-        return this.getRank(uuid).getPrefix();
+        return getRank(uuid).getPrefix();
     }
 
     @Override
@@ -32,12 +31,12 @@ public class Venom implements IRank, RankObject<Rank> {
 
     @Override
     public String getRankColor(UUID uuid) {
-        return this.getRank(uuid).getColor();
+        return getRank(uuid).getColor();
     }
 
     @Override
     public int getRankWeight(UUID uuid) {
-        return this.getRank(uuid).getPriority();
+        return getRank(uuid).getPriority();
     }
 
     @Override
@@ -45,7 +44,6 @@ public class Venom implements IRank, RankObject<Rank> {
         return null;
     }
 
-    @Override
     public Rank getRank(UUID uuid) {
         return VenomAPI.instance.getGrantHandler().findBestRank(uuid);
     }

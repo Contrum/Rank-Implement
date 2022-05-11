@@ -2,12 +2,11 @@ package dev.panda.rank.impl;
 
 import com.broustudio.MizuAPI.MizuAPI;
 import dev.panda.rank.IRank;
-import dev.panda.rank.RankObject;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
 
-public class Mizu implements IRank, RankObject<String> {
+public class Mizu implements IRank{
 
     @Override
     public String getRankSystem() {
@@ -44,7 +43,6 @@ public class Mizu implements IRank, RankObject<String> {
         return null;
     }
 
-    @Override
     public String getRank(UUID uuid) {
         return MizuAPI.getAPI().getRank(uuid);
     }
