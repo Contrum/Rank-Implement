@@ -1,5 +1,6 @@
 package dev.panda.rank.impl;
 
+import cc.fyre.venom.VenomAPI;
 import dev.panda.rank.IRank;
 import dev.panda.rank.RankObject;
 import cc.fyre.venom.rank.data.Rank;
@@ -8,6 +9,7 @@ import org.bukkit.entity.Player;
 import java.util.UUID;
 
 public class Venom implements IRank, RankObject<Rank> {
+
     @Override
     public String getRankSystem() {
         return "Venom";
