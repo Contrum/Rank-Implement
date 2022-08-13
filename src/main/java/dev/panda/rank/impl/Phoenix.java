@@ -2,7 +2,6 @@ package dev.panda.rank.impl;
 
 import dev.panda.rank.IRank;
 import dev.phoenix.phoenix.PhoenixAPI;
-import dev.phoenix.phoenix.profile.Profile;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
@@ -16,32 +15,27 @@ public class Phoenix implements IRank {
 
     @Override
     public String getRankName(UUID uuid) {
-        Profile profile = PhoenixAPI.INSTANCE.getProfile(uuid);
-        return profile.getBestRank().getDisplayName(profile);
+        return PhoenixAPI.INSTANCE.getPlayerRank(uuid).getName();
     }
 
     @Override
     public String getRankPrefix(UUID uuid) {
-        Profile profile = PhoenixAPI.INSTANCE.getProfile(uuid);
-        return profile.getBestRank().getPrefix(profile);
+        return PhoenixAPI.INSTANCE.getPlayerRank(uuid).getPrefix();
     }
 
     @Override
     public String getRankSuffix(UUID uuid) {
-        Profile profile = PhoenixAPI.INSTANCE.getProfile(uuid);
-        return profile.getBestRank().getSuffix();
+        return PhoenixAPI.INSTANCE.getPlayerRank(uuid).getSuffix();
     }
 
     @Override
     public String getRankColor(UUID uuid) {
-        Profile profile = PhoenixAPI.INSTANCE.getProfile(uuid);
-        return profile.getBestRank().getColor();
+        return PhoenixAPI.INSTANCE.getPlayerRank(uuid).getColor();
     }
 
     @Override
     public int getRankWeight(UUID uuid) {
-        Profile profile = PhoenixAPI.INSTANCE.getProfile(uuid);
-        return profile.getPriority();
+        return PhoenixAPI.INSTANCE.getPlayerRank(uuid).getPriority();
     }
 
     @Override
