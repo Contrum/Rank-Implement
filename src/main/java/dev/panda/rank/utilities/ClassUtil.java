@@ -1,4 +1,4 @@
-package dev.panda.rank;
+package dev.panda.rank.utilities;
 
 import lombok.experimental.UtilityClass;
 import org.bukkit.plugin.java.JavaPlugin;

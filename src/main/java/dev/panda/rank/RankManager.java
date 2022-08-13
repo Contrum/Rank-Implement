@@ -1,6 +1,7 @@
 package dev.panda.rank;
 
 import dev.panda.rank.impl.Default;
+import dev.panda.rank.utilities.ClassUtil;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
