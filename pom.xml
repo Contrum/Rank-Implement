@@ -132,7 +132,7 @@
 			<artifactId>PhoenixAPI</artifactId>
 			<version>api</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/ranks/Phoenix-API.jar</systemPath>
+			<systemPath>${project.basedir}/ranks/PhoenixAPI.jar</systemPath>
 		</dependency>
 
 		<!-- Revenge Core API -->

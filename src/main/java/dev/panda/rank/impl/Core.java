@@ -1,12 +1,18 @@
 package dev.panda.rank.impl;
 
-import dev.panda.rank.IRank;
 import cc.revenge.core.CoreAPI;
+import dev.panda.rank.IRank;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
 
 public class Core implements IRank {
+
+    private final CoreAPI coreAPI;
+
+    public Core() {
+        this.coreAPI = new CoreAPI();
+    }
 
     @Override
     public String getRankSystem() {
@@ -15,31 +21,26 @@ public class Core implements IRank {
 
     @Override
     public String getRankName(UUID uuid) {
-        CoreAPI coreAPI = new CoreAPI();
         return coreAPI.getRankName(uuid);
     }
 
     @Override
     public String getRankPrefix(UUID uuid) {
-        CoreAPI coreAPI = new CoreAPI();
         return coreAPI.getRankPrefix(uuid);
     }
 
     @Override
     public String getRankSuffix(UUID uuid) {
-        CoreAPI coreAPI = new CoreAPI();
         return coreAPI.getRankSuffix(uuid);
     }
 
     @Override
     public String getRankColor(UUID uuid) {
-        CoreAPI coreAPI = new CoreAPI();
         return coreAPI.getRankColor(uuid);
     }
 
     @Override
     public int getRankWeight(UUID uuid) {
-        CoreAPI coreAPI = new CoreAPI();
         return coreAPI.getRankWeight(uuid);
     }
 

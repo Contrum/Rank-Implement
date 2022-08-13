@@ -51,6 +51,6 @@ public class Phoenix implements IRank {
 
     @Override
     public String getRealName(Player player) {
-        return PhoenixAPI.INSTANCE.getProfile(player.getUniqueId()).getPlayerNameWithoutDisguise();
+        return null;
     }
 }
