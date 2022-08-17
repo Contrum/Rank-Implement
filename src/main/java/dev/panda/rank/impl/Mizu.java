@@ -51,4 +51,10 @@ public class Mizu implements IRank{
     public String getRank(UUID uuid) {
         return MizuAPI.getAPI().getRank(uuid);
     }
+
+    @Override
+    public String getTag(Player player) {
+        String tag = MizuAPI.getAPI().getTag(player.getUniqueId());
+        return tag.equals("NO_TAG") ? "" : tag;
+    }
 }
