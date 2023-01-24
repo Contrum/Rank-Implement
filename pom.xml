@@ -143,6 +143,15 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/ranks/CoreAPI-1.0-SNAPSHOT.jar</systemPath>
 		</dependency>
+
+		<!-- Invictus Core API -->
+		<dependency>
+			<groupId>Invictus</groupId>
+			<artifactId>InvictusCore</artifactId>
+			<version>api</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/ranks/Invictus-Bukkit-1.0-SNAPSHOT.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<build>
