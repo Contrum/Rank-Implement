@@ -52,4 +52,9 @@ public class Zoom implements IRank {
     public Player getPlayer(UUID uuid) {
         return Bukkit.getPlayer(uuid);
     }
+
+    @Override
+    public String getTag(Player player) {
+        return ZoomAPI.hasTag(player) ? ZoomAPI.getTag(player) : "";
+    }
 }

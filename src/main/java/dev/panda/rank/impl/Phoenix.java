@@ -47,4 +47,9 @@ public class Phoenix implements IRank {
     public String getRealName(Player player) {
         return null;
     }
+
+    @Override
+    public String getTag(Player player) {
+        return PhoenixAPI.INSTANCE.getTag(player.getUniqueId()).getFormat();
+    }
 }
