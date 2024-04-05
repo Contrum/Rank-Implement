@@ -53,4 +53,9 @@ public class Core implements IRank {
     public String getRealName(Player player) {
         return null;
     }
+
+    @Override
+    public String getTag(Player player) {
+        return "";
+    }
 }
