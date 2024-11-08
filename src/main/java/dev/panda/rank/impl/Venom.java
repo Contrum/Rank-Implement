@@ -1,6 +1,7 @@
 package dev.panda.rank.impl;
 
 import cc.fyre.venom.VenomAPI;
+import cc.fyre.venom.profile.data.Profile;
 import dev.panda.rank.IRank;
 import cc.fyre.venom.rank.data.Rank;
 import org.bukkit.entity.Player;
@@ -51,5 +52,11 @@ public class Venom implements IRank {
 
     public Rank getRank(UUID uuid) {
         return VenomAPI.instance.getGrantHandler().findBestRank(uuid);
+    }
+
+    @Override
+    public String getTag(Player player) {
+        Profile profile = VenomAPI.instance.getProfileHandler().findById(player.getUniqueId());
+        return profile != null ? profile.getTag() : "";
     }
 }

@@ -65,4 +65,9 @@ public class AquaCore implements IRank {
     public String getRealName(Player player) {
         return AquaCoreAPI.INSTANCE.getRealName(player);
     }
+
+    @Override
+    public String getTag(Player player) {
+        return AquaCoreAPI.INSTANCE.getTag(player.getUniqueId()).getFormat();
+    }
 }

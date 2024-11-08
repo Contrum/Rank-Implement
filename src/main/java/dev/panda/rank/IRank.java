@@ -14,4 +14,6 @@ public interface IRank {
     int getRankWeight(UUID uuid);
     boolean hasRankTemporary(UUID uuid);
     String getRealName(Player player);
+
+    String getTag(Player player);
 }

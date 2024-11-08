@@ -73,4 +73,9 @@ public class LuckPerms implements IRank {
 
         return user.getCachedData().getMetaData(queryOptions.get());
     }
+
+    @Override
+    public String getTag(Player player) {
+        return "";
+    }
 }

@@ -3,6 +3,7 @@ package dev.panda.rank.impl;
 import dev.panda.rank.IRank;
 import org.bukkit.entity.Player;
 import rip.veax.hydra.HydraAPI;
+import rip.veax.hydra.profile.data.Profile;
 import rip.veax.hydra.rank.data.Rank;
 
 import java.util.UUID;
@@ -51,5 +52,15 @@ public class Hydra implements IRank {
 
     public Rank getRank(UUID uuid) {
         return HydraAPI.instance.getGrantHandler().findBestRank(uuid);
+    }
+
+    @Override
+    public String getTag(Player player) {
+        Profile profile = HydraAPI.instance.getProfileHandler().findById(player.getUniqueId());
+
+        if(profile == null) return "";
+
+        return profile.getTag();
+
     }
 }

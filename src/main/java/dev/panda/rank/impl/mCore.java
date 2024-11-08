@@ -64,4 +64,10 @@ public class mCore implements IRank{
         CoreProfile coreProfile = CorePlugin.getInstance().getProfileHandler().getCoreProfile(uuid);
         return coreProfile == null ? null : coreProfile.getRank();
     }
+
+    @Override
+    public String getTag(Player player) {
+        CoreProfile coreProfile = CorePlugin.getInstance().getProfileHandler().getCoreProfile(player.getUniqueId());
+        return coreProfile == null || coreProfile.getTag() == null ? "" : coreProfile.getTag().getPrefix();
+    }
 }
